@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nilkanchan AC Services</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f2f7fc;
+  color: #172b4d;
+}
+
+header {
+  background: #073b70;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+header h2 {
+  font-size: 23px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(120deg, #073b70, #087ec1);
+  color: white;
+  padding: 75px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.service {
+  background: white;
+  padding: 23px 10px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+  font-weight: bold;
+}
+
+.form-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px #00000012;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #07549a;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 7px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccd6e2;
+  border-radius: 7px;
+  font-size: 15px;
+  outline-color: #087ec1;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #0876bc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #064e86;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#message {
+  text-align: center;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+footer {
+  background: #073b70;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media(max-width:600px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .form-box {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>❄ Nilkanchan AC Services</h2>
+  <a href="#booking">Book Service</a>
+</header>
+
+<section class="hero">
+  <h1>Professional AC Services</h1>
+  <p>
+    AC Installation | AC Repair | AC Maintenance<br>
+    Fast, Reliable & Affordable AC Solutions
+  </p>
+</section>
+
+<div class="container">
+
+  <div class="services">
+    <div class="service">❄ AC Repair</div>
+    <div class="service">🔧 AC Installation</div>
+    <div class="service">⚙ AC Maintenance</div>
+  </div>
+
+  <div class="form-box" id="booking">
+
+    <h2>Book Your AC Service</h2>
+    <p class="subtitle">
+      Fill in your details to book an appointment.
+    </p>
+
+    <form id="bookingForm">
+
+      <label>Customer Name *</label>
+      <input type="text" name="customerName"
+      placeholder="Enter your name" required>
+
+      <label>Mobile Number *</label>
+      <input type="tel" name="mobile"
+      placeholder="10 digit mobile number"
+      pattern="[6-9][0-9]{9}" maxlength="10" required>
+
+      <label>Email Address</label>
+      <input type="email" name="email"
+      placeholder="Enter your email">
+
+      <label>Full Address *</label>
+      <textarea name="address" rows="3"
+      placeholder="House, Street, Village" required></textarea>
+
+      <label>District / City *</label>
+      <input type="text" name="city"
+      placeholder="Enter district or city" required>
+
+      <label>AC Type *</label>
+      <select name="acType" required>
+        <option value="">Select AC Type</option>
+        <option>Split AC</option>
+        <option>Window AC</option>
+        <option>Cassette AC</option>
+        <option>Tower AC</option>
+        <option>Central AC</option>
+      </select>
+
+      <label>AC Brand</label>
+      <select name="brand">
+        <option value="">Select Brand</option>
+        <option>Voltas</option>
+        <option>LG</option>
+        <option>Samsung</option>
+        <option>Daikin</option>
+        <option>Hitachi</option>
+        <option>Blue Star</option>
+        <option>Other</option>
+      </select>
+
+      <label>Number of AC *</label>
+      <input type="number" name="quantity"
+      min="1" max="100" value="1" required>
+
+      <label>Service Required *</label>
+      <select name="serviceType" required>
+        <option value="">Select Service</option>
+        <option>AC General Service</option>
+        <option>AC Repair</option>
+        <option>AC Installation</option>
+        <option>AC Uninstallation</option>
+        <option>Gas Charging</option>
+        <option>Water Leakage Problem</option>
+        <option>AMC Service</option>
+      </select>
+
+      <label>Problem Details</label>
+      <textarea name="problem" rows="3"
+      placeholder="Describe your AC problem"></textarea>
+
+      <label>Preferred Booking Date *</label>
+      <input type="date" name="bookingDate" id="bookingDate" required>
+
+      <label>Preferred Booking Time *</label>
+      <select name="bookingTime" required>
+        <option value="">Select Time</option>
+        <option>9 AM - 11 AM</option>
+        <option>11 AM - 1 PM</option>
+        <option>1 PM - 3 PM</option>
+        <option>3 PM - 5 PM</option>
+        <option>5 PM - 7 PM</option>
+      </select>
+
+      <button type="submit" id="submitBtn">
+        Submit Booking
+      </button>
+
+      <p id="message"></p>
+
+    </form>
+  </div>
+</div>
+
+<footer>
+  <h3>Nilkanchan AC Services</h3>
+  <p>Professional AC Repair & Maintenance</p>
+  <p>Service Area: Purba Medinipur, West Bengal</p>
+  <p>© 2026 Nilkanchan AC Services</p>
+</footer>
+
+<script>
+
+// 1. PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxpk2A7cDB-e7-PDtgqDv0KhuwpDjj1PZxtUXOLyYEMQ96m90blb2WdiFZkHxBk6yZN/exec
+
+// 2. Set minimum booking date
+
+const dateInput = document.getElementById("bookingDate");
+dateInput.min = new Date().toLocaleDateString("en-CA");
+
+// 3. Submit booking
+
+document.getElementById("bookingForm")
+.addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  const form = this;
+  const button = document.getElementById("submitBtn");
+  const message = document.getElementById("message");
+
+  if (SCRIPT_URL.includes("PASTE_YOUR")) {
+    message.style.color = "red";
+    message.textContent = "Please connect Google Sheets first!";
+    return;
+  }
+
+  button.disabled = true;
+  button.textContent = "Please wait...";
+  message.textContent = "Submitting your booking...";
+
+  const formData = new FormData(form);
+  const data = new URLSearchParams();
+
+  for (const [key, value] of formData.entries()) {
+    data.append(key, value);
+  }
+
+  try {
+
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      body: data,
+      mode: "no-cors"
+    });
+
+    message.style.color = "green";
+    message.textContent =
+      "Booking request sent! Thank you for choosing Nilkanchan AC Services.";
+
+    form.reset();
+
+    dateInput.min = new Date().toLocaleDateString("en-CA");
+
+  } catch (error) {
+
+    message.style.color = "red";
+    message.textContent =
+      "Submission failed. Please check your internet connection and try again.";
+
+  } finally {
+
+    button.disabled = false;
+    button.textContent = "Submit Booking";
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
